@@ -250,24 +250,25 @@ window.addEventListener('beforeunload', () => {
   localStorage.setItem('register', reg);
 });
 window.addEventListener('load', () => {
-  if (localStorage.getItem('register' !== 'null')) {
-    lan = localStorage.getItem('language');
-    reg = localStorage.getItem('register');
-    if (reg === 'upperCase') {
-      checker.isUpper = true;
-      capsLock.classList.add('pressed');
-    } else {
-      checker.isUpper = false;
-    }
-    if (lan === 'eng') {
-      checker.isEng = true;
-    } else {
-      checker.isEng = false;
-    }
-    keys.forEach(n => {
-      n.lang = lan;
-      n.register = reg;
-      n.changeLayout();
-    });
+  console.log('load');
+
+  console.log('switch');
+  lan = localStorage.getItem('language');
+  reg = localStorage.getItem('register');
+  if (reg === 'upperCase') {
+    checker.isUpper = true;
+    capsLock.classList.add('pressed');
+  } else {
+    checker.isUpper = false;
   }
+  if (lan === 'eng') {
+    checker.isEng = true;
+  } else {
+    checker.isEng = false;
+  }
+  keys.forEach(n => {
+    n.lang = lan;
+    n.register = reg;
+    n.changeLayout();
+  });
 });

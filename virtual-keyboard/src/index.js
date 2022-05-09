@@ -247,17 +247,9 @@ body.addEventListener('keyup', (e) => {
 });
 window.addEventListener('beforeunload', () => {
   localStorage.setItem('language', lan);
-  localStorage.setItem('register', reg);
 });
 window.addEventListener('load', () => {
   lan = localStorage.getItem('language');
-  reg = localStorage.getItem('register');
-  if (reg === 'upperCase') {
-    checker.isUpper = true;
-    capsLock.classList.add('pressed');
-  } else {
-    checker.isUpper = false;
-  }
   if (lan === 'eng') {
     checker.isEng = true;
   } else {
@@ -265,7 +257,6 @@ window.addEventListener('load', () => {
   }
   keys.forEach(n => {
     n.lang = lan;
-    n.register = reg;
     n.changeLayout();
   });
 });

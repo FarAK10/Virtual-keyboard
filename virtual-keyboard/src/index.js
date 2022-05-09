@@ -250,9 +250,6 @@ window.addEventListener('beforeunload', () => {
   localStorage.setItem('register', reg);
 });
 window.addEventListener('load', () => {
-  console.log('load');
-
-  console.log('switch');
   lan = localStorage.getItem('language');
   reg = localStorage.getItem('register');
   if (reg === 'upperCase') {

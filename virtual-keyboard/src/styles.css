@@ -1,0 +1,105 @@
+
+body {
+   background: linear-gradient(45deg, rgba(9,121,16,1) 14%, rgba(0,173,214,1) 95%);
+   height: 100vh;
+   width: 100vw;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 750px;
+    height:600px ;
+    margin: auto auto;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.heading {
+  color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.textarea {
+    width: 600px;
+    height: 200px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 7px;
+
+}
+.key {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    transition: 0.3;
+    font-family: 'Courier New', Courier, monospace;
+}
+.key:hover {
+    background-color: aqua;
+    transition: 0.3s;
+}
+.key.active {
+    background-color: rgb(101, 240, 101);
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.key.active:hover {
+    background-color: none;
+}
+.shift,.caps-lock,.backspace,.enter{
+    width: 100px;
+    background-color: rgb(44, 44, 44);
+}
+.tab,.del {
+    width: 50px;
+    background-color: rgb(44, 44, 44);
+}
+.caps-lock{
+    position: relative;
+}
+
+.caps-lock::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 8px;
+    right: 8px;
+    background-color: white;
+}
+.caps-lock.pressed::after {
+    background-color: rgb(101, 240, 101) ;
+}
+.alt,.ctrl {
+      background-color: rgb(44, 44, 44);
+}
+.ctrl:nth-child(56) {
+    width: 52px;
+}
+.space {
+    width:382px ;
+}
+footer {
+    margin-top: 20px;
+}
+.footer-heading {
+    color: white;
+    font-size: 30px;
+}

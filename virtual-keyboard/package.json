@@ -1,0 +1,27 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "Private repository for @farak10",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix-js": "eslint-auto-fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/farak10-JSFE2022Q1/virtual-keyboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/farak10-JSFE2022Q1/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/farak10-JSFE2022Q1#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  },
+  "dependencies": {
+    "eslint-auto-fix": "^1.0.4",
+    "eslint-config-airbnb-base": "^15.0.0"
+  }
+}

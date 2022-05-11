@@ -174,16 +174,16 @@ function addToTextarea(element) {
       textarea.setRangeText('', textarea.selectionStart - 1, textarea.selectionEnd, 'end');
     }
   } else if (element.textContent === 'enter') {
-    textarea.value += '\n';
+    textarea.setRangeText('\n', textarea.selectionStart, textarea.selectionEnd, 'end');
     return '';
   } else if (element.textContent === 'Del') {
     if (textarea.selectionEnd + 1) {
       textarea.setRangeText('', textarea.selectionStart, textarea.selectionEnd + 1, 'end');
     }
   } else if (element.textContent === 'Space') {
-    textarea.value += ' ';
+    textarea.setRangeText(' ', textarea.selectionStart, textarea.selectionEnd, 'end');
   } else if (element.textContent === 'Tab') {
-    textarea.value += '    ';
+    textarea.setRangeText('    ', textarea.selectionStart, textarea.selectionEnd, 'end');
   } else if (element.textContent === 'shift') {
     return '';
   } else if (element.textContent === 'CapsLock') {

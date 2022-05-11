@@ -245,6 +245,7 @@ body.addEventListener('keyup', (e) => {
     }
   });
 });
+// local storage
 window.addEventListener('beforeunload', () => {
   localStorage.setItem('language', lan);
 });

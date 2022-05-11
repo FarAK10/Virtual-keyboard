@@ -197,12 +197,16 @@ function addToTextarea(element) {
   }
   return true;
 }
+function disableKeys() {
+  keys.forEach(n => n.tag.classList.remove('active'));
+}
 
 keys.forEach(n => {
   n.tag.addEventListener('click', () => {
     addToTextarea(n.tag);
   });
   n.tag.addEventListener('mousedown', () => {
+    disableKeys();
     n.tag.classList.add('active');
     if (n.tag.textContent === 'ctrl') {
       checker.isCtrl = true;
